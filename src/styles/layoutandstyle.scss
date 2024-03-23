@@ -1,0 +1,234 @@
+$primary-color: #ffa200;
+$secondary-color: #6eda78;
+
+.cardBlock {
+    background-color: white;
+    padding: 16px 90px;
+    height: 115px;
+}
+
+.flexCardBlock {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px 90px;
+    height: 115px;
+    position: relative;
+    gap: 196px;
+}
+
+.flexCardBlock:hover {
+    background-color: $primary-color;
+}
+
+.flexCardBlock:active {
+    background-color: $secondary-color;
+}
+
+.cardBlock {
+    background-color: white;
+    padding: 16px 90px;
+    height: 115px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.cardBlock:hover {
+    background-color: $primary-color;
+}
+
+.cardBlock:active {
+    background-color: $secondary-color;
+}
+
+.mt-10 {
+    margin-top: 40px;
+}
+
+.line {
+    padding-bottom: 40px;
+    border-bottom: 1px solid gray;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 40px;
+}
+
+.containerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+.sectionButton {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    height: auto;
+}
+
+.flex-container {
+    display: flex;
+    gap: 16px;
+}
+
+.col-span-1 {
+    grid-column: span 1 / span 1;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.mt-6 {
+    margin-top: 24px;
+}
+
+.mt-4 {
+    margin-top: 16px;
+}
+
+.cardItem {
+    display: flex;
+    background-color: white;
+    width: 280px;
+    padding: 16px 0px;
+    border-radius: 8px;
+    position: relative;
+    justify-content: center;
+}
+
+.cardItem:hover {
+    background-color: $primary-color;
+}
+
+.cardItem:active {
+    background-color: $secondary-color;
+}
+
+.triangle {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid gray;
+}
+
+.triangleBottom {
+    width: 0;
+    height: 0;
+    border-top: 100px solid gray;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.triangleLeft {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 100px solid gray;
+}
+
+.triangleRight {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 100px solid gray;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.cardItem:hover .circle {
+    background-color: white;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}
+
+.cardItem:hover .square {
+    background-color: white;
+}
+
+.oval {
+    width: 240px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.cardItem:hover .oval {
+    background-color: white;
+}
+
+.rectangle {
+    width: 240px;
+    height: 100px;
+    background-color: gray;
+}
+
+.cardItem:hover .rectangle {
+    background-color: white;
+}
+
+.rhombus {
+    width: 200px;
+    height: 100px;
+    background-color: gray;
+    transform: skewX(30deg);
+}
+
+.cardItem:hover .rhombus {
+    background-color: white;
+}
+
+.trapezoid {
+    width: 150px;
+    border-left: 50px solid transparent;
+    border-bottom: 100px solid gray;
+    border-right: 50px solid transparent;
+}
+
+.cardItem:hover .trapezoid {
+    border-bottom: 100px solid white;
+}
+
+.subText {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $secondary-color;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+}

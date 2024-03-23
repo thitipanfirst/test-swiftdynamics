@@ -1,0 +1,80 @@
+@import './layoutandstyle.scss';
+
+$primary-color: #ffa200;
+$secondary-color: #6eda78;
+
+@mixin flex() {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, $secondary-color, $primary-color);
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  justify-content: center;
+  margin: auto;
+  height: auto;
+}
+
+.selectButton {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 8px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
+
+.textHead {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+  color: black;
+  padding-left: 16px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
+
+.cardTest {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 80px;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.ant-select-dropdown {
+  border-radius: 0;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
