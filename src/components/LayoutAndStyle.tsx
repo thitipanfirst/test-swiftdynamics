@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import './../i18n';
+import { useTranslation } from 'react-i18next';
 
 const LayoutAndStyle = () => {
+    const { t } = useTranslation();
     const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6]);
     const [swapPosition, setSwapPosition] = useState<boolean>(false)
 
@@ -44,16 +47,16 @@ const LayoutAndStyle = () => {
                 <div className='sectionButton mt-10 line'>
                     <div className='cardBlock' onClick={() => moveLeft()}>
                         <div className='triangleLeft'></div>
-                        <div className='subText'>Move shape</div>
+                        <div className='subText'>{t('moveShape')}</div>
                     </div>
                     <div className='flexCardBlock' onClick={() => setSwapPosition(!swapPosition)}>
                         <div className='triangle'></div>
                         <div className='triangleBottom'></div>
-                        <div className='subText'>Move position</div>
+                        <div className='subText'>{t('movePosition')}</div>
                     </div>
                     <div className='cardBlock' onClick={() => moveRight()}>
                         <div className='triangleRight'></div>
-                        <div className='subText'>Move shape</div>
+                        <div className='subText'>{t('moveShape')}</div>
                     </div>
                 </div>
                 <div className={`flex-container mt-6 ${swapPosition ? 'justify-center' : 'justify-end'}`}>

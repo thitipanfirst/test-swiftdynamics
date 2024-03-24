@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './styles/globals.scss';
 import { useTranslation } from 'react-i18next';
 import './i18n';
-import { ConfigProvider, Select } from 'antd';
+import { Select } from 'antd';
 import CardTest from './components/CardTest';
 import LayoutAndStyle from './components/LayoutAndStyle';
+import { Button } from 'antd';
+import FormAndTable from './components/FormAndTable';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -29,23 +31,16 @@ function App() {
     { label: t('th'), value: 'th' },
   ];
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col ">
       <div className='selectButton'>
-        <ConfigProvider
-          theme={{
-            components: {
-              Select: {
-                borderRadius: 0
-              },
-            }
-          }}
-        >
-          <Select
-            value={t(selectOption)}
-            options={options}
-            onChange={(item) => handleLanguage(item.toString())}
-          />
-        </ConfigProvider>
+
+        <Select
+          value={t(selectOption)}
+          options={options}
+          onChange={(item) => handleLanguage(item.toString())}
+          style={{ width: '100px' }}
+        />
+
       </div>
       {testNumber === 0 ? (<div className='container'>
         <div onClick={() => setTestNumber(1)}>
@@ -57,15 +52,18 @@ function App() {
       </div>) : null}
       {testNumber === 1 ? (
         <div className=''>
-          <div className='textHead'>{t('description1')}</div>
+          <div className='flex-row justify-between' style={{ paddingRight: '8px' }}>
+            <div className='textHead'>{t('description1')}</div>
+            <Button onClick={() => setTestNumber(0)}>{t('homepage')}</Button>
+          </div>
           <LayoutAndStyle />
         </div>) : null}
       {testNumber === 2 ? (<div className=''>
-        <div className='flex-row justify-between'>
+        <div className='flex-row justify-between' style={{ paddingRight: '8px' }}>
           <div className='textHead'>{t('description2')}</div>
-          <div className=''>หน้าแรก</div>
+          <Button onClick={() => setTestNumber(0)}>{t('homepage')}</Button>
         </div>
-        <LayoutAndStyle />
+        <FormAndTable />
       </div>) : null}
     </main >
   );
