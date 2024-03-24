@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import dayjs, { Dayjs } from "dayjs";
 interface DrawerState {
-    nameTitle: string;
+    nameTitle: string | null;
     name: string;
     lastName: string;
     birthDay: Dayjs | null;
@@ -18,7 +18,7 @@ interface DrawerState {
 }
 
 const initialState: DrawerState = {
-    nameTitle: '',
+    nameTitle: null,
     name: '',
     lastName: '',
     birthDay: null,
@@ -38,7 +38,7 @@ export const itemSlice = createSlice({
     initialState,
     reducers: {
         CLEAR_FORM: (state) => {
-            state.nameTitle = ''
+            state.nameTitle = null
             state.name = ''
             state.lastName = ''
             state.birthDay = null;
