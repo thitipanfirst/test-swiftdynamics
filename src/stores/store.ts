@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux'
-import ItemSlice from '@/stores/itemSlice/itemSlice'
+import ItemSlice from './itemSlice/itemSlice'
 
 export const store = configureStore({
     reducer: {
