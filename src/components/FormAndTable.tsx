@@ -97,7 +97,7 @@ const FormAndTable = () => {
             dataIndex: 'gender',
             key: 'gender',
             sorter: (a: { gender: string; }, b: { gender: any; }) => a.gender.localeCompare(b.gender),
-            render: (gender: any) => `${gender}`,
+            render: (gender: string) => `${t(gender)}`,
             width: '20%',
         },
         {
@@ -112,6 +112,7 @@ const FormAndTable = () => {
             dataIndex: 'nationality',
             key: 'nationality',
             sorter: (a: { nationality: string; }, b: { nationality: any; }) => a.nationality.localeCompare(b.nationality),
+            render: (nationality: string) => `${t(nationality)}`,
             width: '20%',
         },
         {
@@ -338,8 +339,8 @@ const FormAndTable = () => {
                             placeholder={t('selection')}
                             onChange={(value) => dispatch(SET_nationality(value))}
                             options={[
-                                { value: 'ไทย', label: t('th') },
-                                { value: 'อังกฤษ', label: t('en') },
+                                { value: t('th'), label: t('th') },
+                                { value: t('en'), label: t('en') },
                             ]}
                             style={{ width: 300 }}
                         />

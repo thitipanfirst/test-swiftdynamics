@@ -41,5 +41,10 @@
     "success": "Add successfully!",
     "deleteSuccess": "Deleted successfully!",
     "edit": "Edit",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "ไทย": "Thai",
+    "อังกฤษ": "English",
+    "ผู้ชาย": "Male",
+    "ผู้หญิง": "Female",
+    "ไม่ระบุ": "Not Specified"
 }
